@@ -23,6 +23,9 @@
             line-height: 1;
             margin-bottom: 1rem;
         }
+        .menu-branding {
+            display: none;
+          }
     }
 
     ul.menu-nav,
@@ -89,6 +92,10 @@
       margin-top:1rem;
       font-size: 5rem;
     }
+
+    .menu-branding {
+        display: none;
+      }
   }
 
   .projects {
