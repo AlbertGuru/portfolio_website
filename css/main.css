@@ -193,8 +193,8 @@ main {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: -15rem;
-    right: 38rem;
+    top: -30%;
+    right: 45%;
     height: 100%; }
   main .portrait {
     width: 150px;
