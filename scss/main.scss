@@ -122,14 +122,15 @@ main {
         top: -30%;
         right: 45%;
         height: 100%;
-      }
-      
-      .portrait {
-        width: 150px;
-        height: 150px;
-        background: url('../img/grey1.jpg');
-        border-radius: 50%;
-        border: solid 3px $secondary-color;
+
+
+        div.portrait {
+            width: 150px;
+            height: 150px;
+            background: url('../img/grey1.jpg');
+            border-radius: 50%;
+            border: solid 3px $secondary-color;
+          }
       }
 }
 

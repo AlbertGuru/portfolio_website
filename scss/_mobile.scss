@@ -25,6 +25,10 @@
         }
         .menu-branding {
             display: none;
+
+            div.portrait {
+                display: none;
+              }
           }
     }
 
@@ -95,6 +99,10 @@
 
     .menu-branding {
         display: none;
+
+        div.portrait {
+            display: none;
+          }
       }
   }
 
