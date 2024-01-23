@@ -102,6 +102,7 @@
 
 body {
   background: #444;
+  background-size: cover;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -297,6 +298,8 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+    main .menu-branding {
+      display: none; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -337,6 +340,8 @@ main {
     main .lg-heading {
       margin-top: 1rem;
       font-size: 5rem; }
+    main .menu-branding {
+      display: none; }
   .projects {
     grid-template-columns: 1fr; }
   .boxes {
