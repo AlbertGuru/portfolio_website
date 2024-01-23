@@ -73,8 +73,7 @@ main {
 
             &:hover{
                 color: $secondary-color;
-                transition: all 0.5s ease-out;
-                @include easeOut();
+                @include easeOut;
             }
         }
     }
@@ -93,14 +92,12 @@ main {
         align-items: center;
         margin-top: 4rem;
 
-        div {
+        .main-link {
             font-size: 1.5rem;
             border: 3px $secondary-color solid;
             padding: 1.5rem 2.5rem;
             margin-bottom: 3rem;
             background: rgba(lighten(#000000, 15%), 0.5);
-            //background: rgba(lighten(#333, 10%), 0.5);
-
             @include easeOut;
     
             &:hover {
