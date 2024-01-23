@@ -55,8 +55,17 @@ main {
     // height: 100%;
     min-height: calc(100vh-60px);
 
+    .lg-heading{
+        text-align: center;
+    }
+
+    .sm-heading{
+        text-align: center;
+    }
+
     .icons {
-        margin-top: 1rem;
+        margin-top: -1rem;
+        text-align: center;
 
         a {
             padding: 0.4rem;
@@ -75,6 +84,52 @@ main {
             margin-top: 20vh;
         }
     }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 4rem;
+
+        div {
+            font-size: 1.5rem;
+            border: 3px $secondary-color solid;
+            padding: 1.5rem 2.5rem;
+            margin-bottom: 3rem;
+            background: rgba(lighten(#000000, 15%), 0.5);
+            //background: rgba(lighten(#333, 10%), 0.5);
+
+            @include easeOut;
+    
+            &:hover {
+                padding: 0.5rem 1.5rem;
+                background: $secondary-color;
+                color: set-text-color($secondary-color);
+                span {
+                    color: set-text-color($secondary-color);
+                }
+            }
+        }
+    }
+
+    .menu-branding {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -15rem;
+        right: 38rem;
+        height: 100%;
+      }
+      
+      .portrait {
+        width: 150px;
+        height: 150px;
+        background: url('../img/grey1.jpg');
+        border-radius: 50%;
+        border: solid 3px $secondary-color;
+      }
 }
 
 .about-info {

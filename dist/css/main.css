@@ -24,18 +24,37 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.97;
-  visibility: hidden; }
+  opacity: 0.99;
+  visibility: hidden;
+  /*&-branding {
+        background: $primary-color;
+        transform: translate3d(0, -100%, 0);
+        @include easeOut;
+
+        &.show {
+            // slide in from top
+            transform: translate3d(0, 0, 0);
+        }
+
+        .portrait {
+            width: 250px;
+            height: 250px;
+            background: url('../img/grey.jpg');
+            border-radius: 50%;
+            border: solid 3px $secondary-color;
+        }
+        
+    } */ }
   .menu.show {
     visibility: visible; }
-  .menu-branding, .menu-nav {
+  .menu-nav {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    float: left;
-    width: 50%;
-    height: 100vh;
+    float: right;
+    width: 24%;
+    height: 43vh;
     overflow: hidden; }
   .menu-nav {
     margin: 0;
@@ -46,18 +65,6 @@
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
-  .menu-branding {
-    background: #444;
-    transform: translate3d(0, -100%, 0);
-    transition: all 0.5s ease-out; }
-    .menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-    .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/grey.jpg");
-      border-radius: 50%;
-      border: solid 3px #ee1a1a; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -101,7 +108,7 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url(../img/bw.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -145,8 +152,13 @@ header {
 main {
   padding: 4rem;
   min-height: calc(100vh-60px); }
+  main .lg-heading {
+    text-align: center; }
+  main .sm-heading {
+    text-align: center; }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: -1rem;
+    text-align: center; }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
@@ -157,6 +169,39 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+  main .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4rem; }
+    main .links div {
+      font-size: 1.5rem;
+      border: 3px #ee1a1a solid;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+      background: rgba(38, 38, 38, 0.5);
+      transition: all 0.5s ease-out; }
+      main .links div:hover {
+        padding: 0.5rem 1.5rem;
+        background: #ee1a1a;
+        color: #000; }
+        main .links div:hover span {
+          color: #000; }
+  main .menu-branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -15rem;
+    right: 38rem;
+    height: 100%; }
+  main .portrait {
+    width: 150px;
+    height: 150px;
+    background: url("../img/grey1.jpg");
+    border-radius: 50%;
+    border: solid 3px #ee1a1a; }
 
 .about-info {
   display: grid;
@@ -261,24 +306,40 @@ main {
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
-    height: 75vh;
+    height: 50vh;
     transform: translate3d(100%, 0, 0);
     font-size: 24px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(-100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../img/grey1.jpg");
-      width: 150px;
-      height: 150px; }
+  /*.menu-branding {
+        height: 25vh;
+        transform: translate3d(-100%, 0, 0);
+
+        .portrait {
+            background: url('../img/grey1.jpg');
+            width: 150px;
+            height: 150px;
+        }
+    }*/
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .boxes {
+    display: flex; }
+    .boxes div {
+      font-size: 1rem; } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .boxes {
+    display: flex; }
+    .boxes div {
+      font-size: 1rem; } }
