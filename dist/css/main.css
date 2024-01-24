@@ -164,7 +164,6 @@ main {
       padding: 0.4rem; }
       main .icons a:hover {
         color: #ee1a1a;
-        transition: all 0.5s ease-out;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -176,33 +175,38 @@ main {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 4rem; }
-    main .links div {
+    main .links .main-link {
       font-size: 1.5rem;
       border: 3px #ee1a1a solid;
       padding: 1.5rem 2.5rem;
       margin-bottom: 3rem;
       background: rgba(38, 38, 38, 0.5);
       transition: all 0.5s ease-out; }
-      main .links div:hover {
+      main .links .main-link:hover {
         padding: 0.5rem 1.5rem;
         background: #ee1a1a;
         color: #000; }
-        main .links div:hover span {
+        main .links .main-link:hover span {
           color: #000; }
   main .menu-branding {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: -30%;
-    right: 45%;
-    height: 100%; }
-  main .portrait {
-    width: 150px;
+    top: 0%;
+    right: 0%;
     height: 150px;
-    background: url("../img/grey1.jpg");
-    border-radius: 50%;
-    border: solid 3px #ee1a1a; }
+    /* Set a fixed height */
+    width: 100%; }
+    main .menu-branding div.portrait {
+      position: absolute;
+      bottom: -50%;
+      /* Move the portrait up by half the height */
+      width: 150px;
+      height: 150px;
+      background: url("../img/grey1.jpg");
+      border-radius: 50%;
+      border: solid 3px #ee1a1a; }
 
 .about-info {
   display: grid;
@@ -292,6 +296,8 @@ main {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
+  body {
+    height: 100vh; }
   main {
     align-items: center;
     text-align: center; }
@@ -300,6 +306,13 @@ main {
       margin-bottom: 1rem; }
     main .menu-branding {
       display: none; }
+      main .menu-branding div.portrait {
+        display: none; }
+    main .links {
+      grid-template-columns: 1fr; }
+      main .links .main-link {
+        font-size: 100%;
+        padding: 1rem 2rem; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -333,6 +346,8 @@ main {
       font-size: 1rem; } }
 
 @media screen and (max-width: 500px) {
+  body {
+    height: 100%; }
   main {
     padding: 2rem; }
     main #home h1 {
@@ -342,6 +357,13 @@ main {
       font-size: 5rem; }
     main .menu-branding {
       display: none; }
+      main .menu-branding div.portrait {
+        display: none; }
+    main .links {
+      grid-template-columns: 1fr; }
+      main .links .main-link {
+        font-size: 100%;
+        padding: 1rem 2rem; }
   .projects {
     grid-template-columns: 1fr; }
   .boxes {

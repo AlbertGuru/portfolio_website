@@ -84,6 +84,7 @@ main {
             margin-top: 20vh;
         }
     }
+    
 
     .links {
         display: flex;
@@ -116,12 +117,18 @@ main {
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: -30%;
-        right: 45%;
-        height: 100%;
+        //top: -30%;
+        //right: 45%;
+        //height: 100%;
+        top: 0%;
+        right: 0%;
+        height: 150px; /* Set a fixed height */
+        width: 100%;
 
 
         div.portrait {
+            position: absolute;
+            bottom: -50%; /* Move the portrait up by half the height */
             width: 150px;
             height: 150px;
             background: url('../img/grey1.jpg');
